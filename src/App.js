@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import logo from './resources/logo.gif';
 import './App.css';
-//comments to test pete origin
+//testing components jose t
+//my name is PETE and i like to eat alot
 class App extends Component {
   render() {
     return (

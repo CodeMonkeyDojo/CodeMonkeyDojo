@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import {BrowserRouter, Route, Switch } from "react-router-dom";
+import "./App.css"
+import "./index.css"
 
 import Home from "./components/Home"
 import About from "./components/About"
-import Contact from "./components/Contact";
+import Forum from "./components/Forum";
 import TutorialText from "./components/TutorialText";
 import Error from "./components/Error";
 import Navigation from "./components/Navigation";
@@ -21,15 +23,18 @@ class App extends Component {
 
      <Route path = "/" component = {Home} exact />
       <Route path = "/about" component = {About} />
-      <Route path = "/Contact" component = {Contact} />
+      <Route path = "/Forum" component = {Forum} />
       <Route path = "/TutorialText" component = {TutorialText} />
       <Route path = "/SubmitTutorial" component = {SubmitTutorial} />
       <Route component = {Error} />
 
     </Switch>
+
   </div>
 
+
       </BrowserRouter>
+
     );
   }
 }

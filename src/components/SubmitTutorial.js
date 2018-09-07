@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import {BrowserRouter, Route } from "react-router-dom";
+import Footer from "./footer"
 
 const Contact = () => {
   return (
+    <div>
 
     <form onSubmit={this.handleSubmit}>
       <label htmlFor="username">Tienes una sugerencia/tutorial para Codemonkeys? Diganos</label>
@@ -16,10 +18,11 @@ const Contact = () => {
         <label htmlFor="birthdate">Comentarios</label>
         <input id="birthdate" name="birthdate" type="text" />
   <br></br>
-        <button>Send data!</button>
+        <button>Enviar</button>
       </form>
 
-
+<Footer />
+</div>
 
   );
 }

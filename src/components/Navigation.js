@@ -8,7 +8,7 @@ const Navigation = () => {
 
   <NavLink to="/">Home</NavLink>
 
-  <NavLink to="/Contact"> Forum </NavLink>
+  <NavLink to="/Forum"> Forum </NavLink>
   <NavLink to="/TutorialText"> Tutorials </NavLink>
   <NavLink to="/SubmitTutorial">      Submit Tutorial </NavLink>
 

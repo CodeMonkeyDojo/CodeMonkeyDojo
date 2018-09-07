@@ -1,31 +1,35 @@
 import React, { Component } from 'react';
-import logo from './resources/logo.gif';
-import './App.css';
-import './index.css';
-import Navbar from './components/navbar.js'
-import CenterDiv from './components/centerDiv.js'
-import Footer from './components/footer.js'
-import VideoComponent from './components/VideoPlayer.js'
+import {BrowserRouter, Route, Switch } from "react-router-dom";
+
+import Home from "./components/Home"
+import About from "./components/About"
+import Contact from "./components/Contact";
+import TutorialText from "./components/TutorialText";
+import Error from "./components/Error";
+import Navigation from "./components/Navigation";
+import VideoComponent from "./components/VideoPlayer"
+import SubmitTutorial from "./components/SubmitTutorial"
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Navbar />
-          <header className="App-header">
-        </header>
-        <br></br><br></br><br></br><br></br><div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
-          <div class="w3-display-middle" style={{whiteSpace:'nowrap'}}></div>
-          <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Code <span class="w3-hide-small">Monkey</span> Dojo</span></div>
-          <br></br><img src={logo} className="App-logo" alt="logo" /><br></br>
-          <h1 className="App-title">Pete, Data, Chepe and Pancho Working!</h1>
-        <p className="App-intro">
-          All rights reserved
-        </p>
-        {/*<CenterDiv />
-        <VideoComponent />*/}
-        <Footer />
-      </div>
+      <BrowserRouter>
+        <div>
+      <Navigation />
+
+      <Switch>
+
+     <Route path = "/" component = {Home} exact />
+      <Route path = "/about" component = {About} />
+      <Route path = "/Contact" component = {Contact} />
+      <Route path = "/TutorialText" component = {TutorialText} />
+      <Route path = "/SubmitTutorial" component = {SubmitTutorial} />
+      <Route component = {Error} />
+
+    </Switch>
+  </div>
+
+      </BrowserRouter>
     );
   }
 }

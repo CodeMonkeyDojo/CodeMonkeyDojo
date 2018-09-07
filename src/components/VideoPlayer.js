@@ -3,8 +3,10 @@
 // tutorial video title it should show our tutorial video again
 // the default video should be stored in the tutorial table
 
-import React from 'react';
+
 import YouTube from 'react-youtube';
+import React, { Component } from 'react';
+import {BrowserRouter, Route } from "react-router-dom";
 
 class VideoComponent extends React.Component {
   render() {

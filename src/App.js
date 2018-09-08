@@ -1,4 +1,9 @@
 import React, { Component } from 'react';
+import logo from './resources/logo.gif';
+import './App.css';
+//testing components jose t
+//my name is PETE and i like to eat alot
+
 import {BrowserRouter, Route, Switch } from "react-router-dom";
 import "./App.css"
 import "./index.css"
@@ -11,6 +16,7 @@ import Error from "./components/Error";
 import Navigation from "./components/Navigation";
 import VideoComponent from "./components/VideoPlayer"
 import SubmitTutorial from "./components/SubmitTutorial"
+
 
 class App extends Component {
   render() {

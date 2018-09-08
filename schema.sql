@@ -5,6 +5,7 @@ CREATE DATABASE MonkeyDB;
 USE MonkeyDB;
 
 -- need to follow the table  diagram in order to allow for optimal organization
+-- working
 
 CREATE TABLE Users(
   id int NOT NULL AUTO_INCREMENT,

@@ -27,3 +27,13 @@ app.post('/users', function(req, res) {
     });
     res.end('Success');
 });
+
+app.get('/users', function(req, res) {
+
+    var user = req.body;
+
+    var query = connection.query('SELECT * FROM user_name', user  function(err, result) {
+
+    });
+    res.end('Success');
+});

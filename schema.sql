@@ -44,3 +44,13 @@ INSERT INTO Forum
   ("Pancho", "I want to sleep", 22 );
 
 -- insert into conversation (message, responce) values
+
+CREATE TABLE Tutorial (
+    id int NOT NULL AUTO_INCREMENT,
+    name varchar(36) NOT NULL,
+    description varchar(200) NOT NULL,
+    additional_desc varchar(200) NOT NULL,
+    parent_id int NOT NULL,
+    datetime datetime NOT NULL,
+    PRIMARY KEY (ID)
+  );

@@ -41,3 +41,13 @@ app.post("/Forum", function(req, res) {
 app.listen(3000, function() {
   console.log("Server started and listening on port 3000");
 });
+
+app.get('/users', function(req, res) {
+
+    var user = req.body;
+
+    var query = connection.query('SELECT * FROM user_name', user  function(err, result) {
+
+    });
+    res.end('Success');
+});

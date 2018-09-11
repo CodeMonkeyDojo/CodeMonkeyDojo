@@ -5,6 +5,7 @@ CREATE DATABASE MonkeyDB;
 USE MonkeyDB;
 
 -- need to follow the table  diagram in order to allow for optimal organization
+-- working
 
 -- CREATE TABLE Users(
 --   id int NOT NULL AUTO_INCREMENT,
@@ -24,7 +25,7 @@ CREATE TABLE Users (
 INSERT INTO Users (quantity, description) VALUES (2134, "Pancho");
 INSERT INTO Users (quantity,description) VALUES (141, "Chepe");
 INSERT INTO Users (quantity, description) VALUES (434, "Pete");
-INSERT INTO Users (quantity, description) VALUES (141, "data");
+INSERT INTO Users (quantity, description) VALUES (141, "D474");
 
 
 -- insert into Users (type,
@@ -66,6 +67,16 @@ INSERT INTO Forum
   ("Pete", "I want to sleep", 22 ),
   ("Pancho", "I want to rest", 22 ),
   ("Chepe", "I want to slumber", 22 ),
-  ("Data", "I want to nap", 22 );
+  ("D474", "Sleep is the cousin of death", 22 );
 
 -- insert into conversation (message, responce) values
+
+CREATE TABLE Tutorial (
+    id int NOT NULL AUTO_INCREMENT,
+    name varchar(36) NOT NULL,
+    description varchar(200) NOT NULL,
+    additional_desc varchar(200) NOT NULL,
+    parent_id int NOT NULL,
+    datetime datetime NOT NULL,
+    PRIMARY KEY (ID)
+  );

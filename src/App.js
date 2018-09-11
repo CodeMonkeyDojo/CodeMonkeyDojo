@@ -12,6 +12,8 @@ import Navigation from "./components/Navigation";
 import VideoComponent from "./components/VideoPlayer"
 import SubmitTutorial from "./components/SubmitTutorial"
 
+{/*Bahama mama sujamma*/}
+
 class App extends Component {
   render() {
     return (

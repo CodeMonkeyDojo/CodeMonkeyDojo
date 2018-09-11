@@ -25,7 +25,7 @@ CREATE TABLE Users (
 INSERT INTO Users (quantity, description) VALUES (2134, "Pancho");
 INSERT INTO Users (quantity,description) VALUES (141, "Chepe");
 INSERT INTO Users (quantity, description) VALUES (434, "Pete");
-INSERT INTO Users (quantity, description) VALUES (141, "data");
+INSERT INTO Users (quantity, description) VALUES (141, "D474");
 
 
 -- insert into Users (type,
@@ -67,7 +67,7 @@ INSERT INTO Forum
   ("Pete", "I want to sleep", 22 ),
   ("Pancho", "I want to rest", 22 ),
   ("Chepe", "I want to slumber", 22 ),
-  ("Data", "I want to nap", 22 );
+  ("D474", "Sleep is the cousin of death", 22 );
 
 -- insert into conversation (message, responce) values
 

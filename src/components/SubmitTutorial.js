@@ -5,9 +5,9 @@ import Footer from "./footer"
 const Contact = () => {
   return (
     <div>
-
+// (type, user_name, email, password, === TYPE CAREFULL should be auto
     <form onSubmit={this.handleSubmit}>
-      <label htmlFor="username">Tienes una sugerencia/tutorial para Codemonkeys? Diganos</label>
+      <label htmlFor="username">Unete al CodeMonkey TEAM </label>
       <br></br>
         <label htmlFor="username">Nombre</label>
         <input id="username" name="username" type="text" />
@@ -15,7 +15,7 @@ const Contact = () => {
         <label htmlFor="email">Correo Electronico</label>
         <input id="email" name="email" type="email" />
   <br></br>
-        <label htmlFor="birthdate">Comentarios</label>
+        <label htmlFor="birthdate">contrasena</label>
         <input id="birthdate" name="birthdate" type="text" />
   <br></br>
         <button>Enviar</button>

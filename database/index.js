@@ -1,19 +1,22 @@
+//This will be the database file
+.
+var React = require('react');
+var ReactDOM = require('react-dom');
+
 var mysql = require('mysql');
+var express = require('express');
+var app = express();
+
+var fs = require('fs');
 
 var connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'Asus1!',
-  database: 'MonkeyDB'
+    host     : 'localhost',
+    user     : 'root',
+    password : '',
+    database : 'MonkeyDB'
 });
-//I should not be able to change th master master
+
 // connection.connect();
-// var Users = {
-//   type : 1,
-//   user_name: "Pancho",
-//   email: "PanchoLOCO@Poblanos.com",
-//   password: "Macaque1!"
-// };
 
 const selectAll = function(cb) {
   connection.query("SELECT * FROM Users", (err, results, fields) => {
@@ -25,10 +28,10 @@ const selectAll = function(cb) {
   });
 };
 
-const insertOne = function(type, user_name,email,password, cb) {
+const insertOne = function(quantity, description, cb) {
   connection.query(
-    "INSERT INTO Users (type, user_name,email,password) VALUES (?, ?)",
-    [type, user_name, email, password],
+    "INSERT INTO Users (quantity, description) VALUES (?, ?)",
+    [description, quantity],
     (err, results, fields) => {
       if (err) {
         cb(err, null);

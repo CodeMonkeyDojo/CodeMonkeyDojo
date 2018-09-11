@@ -9,6 +9,8 @@ const TutorialText = () => {
 <p> TutorialText </p>
 <VideoComponent />
 
+
+
 <Footer />
 
 </div>

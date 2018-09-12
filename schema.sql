@@ -58,8 +58,8 @@ CREATE TABLE Forum (
     parent_id int NOT NULL,
     datetime datetime NOT NULL,
     PRIMARY KEY (ID)
+    FOREIGN KEY (TutorialID) REFERENCES Tutorial(id), --missing foreign key?
   );
-
 
 INSERT INTO Forum
   (name, description, parent_id)

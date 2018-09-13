@@ -18,17 +18,45 @@ app.get("/Users", function(req, res) {
   });
 });
 
-//handle post requests to groceries
+app.get("/Users", function(req, res) {
+  database.selectUser((err, results) => {
+    if (err) {
+      res.sendStatus(500);
+    } else {
+      res.status(200).json(results);
+    }
+  });
+});
+
+//handle post requests to Forum
 app.post("/Forum", function(req, res) {
   //update data object with new object from my req.body
-  let quantity = req.body.quantity;
-  let description = req.body.description;
+  let user = req.body.user;
+  let forumPost = req.body.forumPost;
   //send the updated data object back
-
   if (!description) {
     res.sendStatus(400);
   } else {
-    database.insertOne(description, quantity, (err, results) => {
+    database.insertOne(forumPost, user, (err, results) => {
+      if (err) {
+        res.sendStatus(500);
+      } else {
+        res.status(200).json(results);
+      }
+    });
+  }
+});
+
+//handle get requests to Forum
+app.get("/Forum", function(req, res) {
+  //update data object with new object from my req.body
+  let user = req.body.user;
+  let forumPost = req.body.forumPost;
+  //send the updated data object back
+  if (!description) {
+    res.sendStatus(400);
+  } else {
+    database.selectAllForum (forumPost, user, (err, results) => {
       if (err) {
         res.sendStatus(500);
       } else {

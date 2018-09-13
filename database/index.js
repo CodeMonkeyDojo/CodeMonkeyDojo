@@ -53,5 +53,17 @@ const insertOne = function(quantity, description, cb) {
   );
 };
 
+const selectAllForum = function(cb) {
+  connection.query("SELECT * FROM Forum", (err, results, fields) => {
+    if (err) {
+      cb(err, null);
+    } else {
+      cb(null, results);
+    }
+  });
+};
+
 module.exports.selectAll = selectAll;
 module.exports.insertOne = insertOne;
+module.exports.selectUser = selectUser;
+module.exports.selectAllForum = selectAllForum;

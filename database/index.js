@@ -28,6 +28,16 @@ const selectAll = function(cb) {
   });
 };
 
+const selectUser = function(user, cb) {
+  connection.query("SELECT" + user + "FROM Users", (err, results, fields) => {
+    if (err) {
+      cb(err, null);
+    } else {
+      cb(null, results);
+    }
+  });
+};
+
 const insertOne = function(quantity, description, cb) {
   connection.query(
     "INSERT INTO Users (quantity, description) VALUES (?, ?)",
